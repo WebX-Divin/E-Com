@@ -1,10 +1,17 @@
 {
     "cSpell.words": [
+        "appinvite",
         "cupertino",
+        "divin",
+        "firebasestorage",
         "lato",
+        "LCMP",
+        "mobilesdk",
         "nunito",
         "roboto",
+        "RZOF",
         "Textform"
     ],
-    "java.compile.nullAnalysis.mode": "automatic"
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "automatic"
 }
