@@ -46,4 +46,5 @@ android/app/build
 
 
 .vscode/settings.json
-android/app/google-services.json
+.vscode
+.vscode/

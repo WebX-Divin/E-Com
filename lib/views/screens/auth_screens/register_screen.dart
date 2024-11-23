@@ -12,6 +12,10 @@ class RegisterScreen extends StatefulWidget {
 
 class _RegisterScreenState extends State<RegisterScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  late String email;
+  late String password;
+  late String name;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,6 +68,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       }
                       return null;
                     },
+                    onChanged: (value) {
+                      email = value;
+                    },
                     labelText: 'enter your email',
                     iconURL: 'assets/icons/email.png',
                   ),
@@ -89,6 +96,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       }
                       return null;
                     },
+                    onChanged: (value) {
+                      name = value;
+                    },
                     labelText: 'enter your full name',
                     iconURL: 'assets/icons/user.png',
                   ),
@@ -113,6 +123,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         return 'password is required';
                       }
                       return null;
+                    },
+                    onChanged: (value) {
+                      password = value;
                     },
                     labelText: 'enter your password',
                     iconURL: 'assets/icons/password.png',

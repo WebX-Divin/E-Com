@@ -7,6 +7,7 @@ class AuthTextform extends StatefulWidget {
   final bool suffixIcon;
   final String? Function(String?)? validator;
   final TextInputType keyboardType;
+  final void Function(String)? onChanged;
 
   const AuthTextform({
     super.key,
@@ -15,6 +16,7 @@ class AuthTextform extends StatefulWidget {
     this.suffixIcon = false,
     required this.validator,
     required this.keyboardType,
+    this.onChanged,
   });
 
   @override
@@ -25,6 +27,7 @@ class _AuthTextformState extends State<AuthTextform> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onChanged: widget.onChanged,
       keyboardType: widget.keyboardType,
       validator: widget.validator,
       decoration: InputDecoration(

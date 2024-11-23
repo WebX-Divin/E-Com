@@ -1,4 +1,5 @@
 import 'package:e_com/views/screens/auth_screens/register_screen.dart';
+import 'package:e_com/views/screens/main_screen.dart';
 import 'package:e_com/views/widgets/auth/login_textform.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,6 +13,8 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  late String email;
+  late String password;
 
   @override
   Widget build(BuildContext context) {
@@ -65,6 +68,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       }
                       return null;
                     },
+                    onChanged: (value) {
+                      email = value;
+                    },
                     labelText: 'enter your email',
                     iconURL: 'assets/icons/email.png',
                   ),
@@ -90,6 +96,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       }
                       return null;
                     },
+                    onChanged: (value) {
+                      password = value;
+                    },
                     labelText: 'enter your password',
                     iconURL: 'assets/icons/password.png',
                     suffixIcon: true,
@@ -98,9 +107,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 16,
                   ),
                   InkWell(
-                    onTap: () {
-                      if (_formKey.currentState!.validate()) {}
-                    },
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MainScreen(),
+                      ),
+                    ),
+                    // onTap: () {
+                    //   if (_formKey.currentState!.validate()) {}
+                    // },
                     child: Container(
                       width: 320,
                       height: 50,

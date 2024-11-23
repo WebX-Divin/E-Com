@@ -10,6 +10,7 @@
         "nunito",
         "roboto",
         "RZOF",
+        "screendart",
         "Textform"
     ],
     "java.compile.nullAnalysis.mode": "automatic",
